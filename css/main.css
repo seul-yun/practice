@@ -228,13 +228,23 @@ a {
     background-color: cadetblue;
     width: 250px;
 }
+.group2 {
+    background-color: plum;
+    width: 380px;
+}
+.group3 {
+    background-color: #fff;
+    width: 190px;
+}
+
+/*로그인*/
 .login {
-    background: #b3dced linear-gradient(to bottom, #b3dced 0%,#29b8e5 37%,#29b8e5 61%,#bce0ee 100%);
+    background: radial-gradient(circle at right top, #e8852e, #ed552f);
     border-radius: 5px;
     padding: 10px;
     box-shadow: 5px  5px 0 0 #aaa;
 }
-.login-heading{
+.login-head{
     color: rgb(255, 255, 0);
     font-weight: 700;
     font-size: 1.5rem;
@@ -266,28 +276,32 @@ a {
 }
 .btn-login{
     position: absolute;
-    top : 0;
+    top : 20px;
     right: 0;
     width: 50px;
     height: 50px;
-    background-color:dodgerblue;
+    border: 1px solid #ffa500;
+    background-color:yellowgreen;
     color: #fff;
     font-size: 1.2rem;
-    border-width : 1px;
-    border-style: solid;
-    background-color: orange;
-    border-image: initial;
-    padding: 0;
-    border-radius: 3px;
+    border-radius: 3px; 
 }
-.group2 {
-    background-color: plum;
-    width: 380px;
-}
-.group3 {
+.sign{
     background-color: #fff;
-    width: 190px;
+    list-style: none;
+    border-radius:  0 0 5px 5px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    
 }
+.sign li{
+    letter-spacing: -1px;
+    font-size: 1.3rem;
+}
+.sign .icon-right-open::before{
+    color: yellowgreen;
+  }
 .slogan {
     background-color:green
 }
