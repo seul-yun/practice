@@ -18,7 +18,7 @@ body {
     font-weight: 400;
 }
 /* 숨김 콘텐츠 */
-.a11y-hidden {
+.a11y-hidden, legend {
     position: absolute; /*부모요소 기준으로 위치 잡음. float와 유사*/
     width: 1px;
     height: 1px;
@@ -214,18 +214,18 @@ a {
     width: 500px;
     animation: textAni 5000ms ease-in-out forwards;
 }
+
 /* 메인 콘텐츠 */
 .main {
     background: darksalmon;
     min-height: 450px;
     padding: 30px;
     display: flex; /*아이템 가로정렬*/
-    flex-direction: row;
-    justify-content: flex-start;
+    flex-flow: row nowrap;
+    justify-content: space-between;
     align-items: flex-start;
 }
 .group1 {
-    background-color: cadetblue;
     width: 250px;
 }
 .group2 {
@@ -242,66 +242,136 @@ a {
     background: radial-gradient(circle at right top, #e8852e, #ed552f);
     border-radius: 5px;
     padding: 10px;
-    box-shadow: 5px  5px 0 0 #aaa;
+    box-shadow: 5px 5px 0 0 #aaa;
+
 }
-.login-head{
+.login-heading{
     color: rgb(255, 255, 0);
     font-weight: 700;
     font-size: 1.5rem;
-    text-indent: 10px; /*양수면 들여쓰기*/
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    
 }
 .login-form {
     background-color: #fff;
     border-radius: 5px 5px 0 0;
     padding: 10px 10px 0 10px;
-    margin-top: 10px;
+    
 }
 .login-form fieldset{
     position: relative;
-    padding-bottom: 10px;
-    border-bottom: 1px solid rgb(170, 170, 170);
+    padding: 0;
+    padding-bottom: 5px;
+    border: 0;
+    margin: 0;
+    border-bottom: 1px solid #aaa;
 }
-.user-email{
-    margin-bottom: 6px;
+.login-form div{
+    width: 150px;
+    margin-bottom: 5px;
 }
 .login-form label{
     display: inline-block;
-    width: 4em;
+    width: 55px;
 }
 .login-form input{
-    width: 100px;
-    height: 22px;
+    width: 90px;
+    height: 24px;
     border: 1px solid #aaa;
-    padding: 1px 1px 1px 5px;
+    padding: 1px 1px 1px 0.5em;
 }
 .btn-login{
     position: absolute;
-    top : 20px;
+    top : 0;
     right: 0;
     width: 50px;
-    height: 50px;
-    border: 1px solid #ffa500;
-    background-color:yellowgreen;
+    height: 52px;
+    background-color:dodgerblue;
+    border: dodgerblue;
+    cursor: pointer;
     color: #fff;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     border-radius: 3px; 
+    padding: 5px;
 }
-.sign{
+.member-only {
     background-color: #fff;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin: 0;
     list-style: none;
-    border-radius:  0 0 5px 5px;
     padding: 10px;
-    display: flex;
-    justify-content: space-between;
+    /* overflow: hidden; */
+}
+.member-only::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.member-only li:first-child{
+    float: left;
+}
+.member-only li:last-child{
+    float:right;
+}
+.member-only a{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.member-only a::before{
+    display: inline-block;
+    content: '\e803';
+    font-family: 'fontello';
+    color: yellowgreen;
+    margin-right: .2em;
+  }
+.validation-list{
+    list-style: none;
+    background-image: radial-gradient(to bottom skyblue,dodgerblue);
+    padding: 0px;
+   
+}
+.validation-list a{
+    padding: 10px;
+
+}
+.validation-list li{
+    margin-top: 10px;
+    background-color: #ccc;
+    border-radius: 50px;
+    height: 35px;
+    padding-left: 20px;
+    padding-top: 10px;
+    border: 1px solid gray;
+}
+.validation-list li:first-child{
     
 }
-.sign li{
-    letter-spacing: -1px;
-    font-size: 1.3rem;
+.validation-list li:last-child{
+    
 }
-.sign .icon-right-open::before{
-    color: yellowgreen;
-  }
+.term {
+    background-color: #ccc;
+    border: 1px solid grey;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+.term-heading {
+    font-weight: 700;
+    font-size: 1.5rem;
+    padding-left: 10px;
+}
+.term-list-subject {
+    
+}
+.term-list-thumbnail {
+    
+}
+
+/* 슬로건 */
 .slogan {
     background-color:green
 }
