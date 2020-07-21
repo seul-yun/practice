@@ -120,30 +120,72 @@
                     </li>
                 </ul>
                 </section>
+                <h2 class="a11y-hidden">유효성 검사 배너</h2>
                 <ul class="validation-list">
-                    <li>
-                        <a href="#" target="_blank" title="유효성검사"> W3C Markup Validation</a>
-                    </li>
-                    <li>
-                        <a href="#" target="_blank" title="유효성검사"> CSS Validation Service</a>
-                    </li>
+                    <li><a href="" target="_blank" title="마크업 유효성 검사 사이트로 이동(새창)">W3C Markup Validation</a></li>
+                    <li><a href="" target="_blank" title="CSS 유효성 검사 사이트로 이동(새창)">CSS Validation Service</a></li>
                 </ul>
                 <section class="term">
-                    <h2 class="term-heading">웹관련용어</h2>
+                    <h2 class="term-heading">웹 관련 용어</h2>
                     <dl class="term-list">
-                        <div class="clearfix">
+                        <div class="odd">
                             <dt class="term-list-subject">웹 표준이란?</dt>
                             <dd class="term-list-thumbnail">
-                                <img src="images/web_standards.gif" alt="w3c로고" />
+                                <img src="./images/web_standards.gif" alt="w3c" />
                             </dd>
+                            <dd class="term-list-brief">
+                                <a href="#">W3C 단체에서 규정한 웹 기술 사양에 대한 규칙을 말하며 표준 규격은...</a>
+                            </dd>
+                        </div>
+                        <div class="even">
+                            <dt class="term-list-subject">웹 표준이란?</dt>
                             <dd class="term-list-thumbnail">
-                                w3c에서~~규격은~...
+                                <img src="./images/web_standards.gif" alt="w3c" />
+                            </dd>
+                            <dd class="term-list-brief">
+                                <a href="#">W3C 단체에서 규정한 웹 기술 사양에 대한 규칙을 말하며 표준 규격은...</a>
                             </dd>
                         </div>
                     </dl>
                 </section>
             </div>
-            <div class="group group2">group2</div>
+            <div class="group group2">
+                <h2 class="a11y-hidden">검색</h2>
+                <form method="POST" action="#" class="serch-form">
+                    <fieldset>
+                        <legend a11y-hidden>검색창</legend>
+                        <div class="search">
+                            <label for="search"></label>
+                            <input type="search" id="search" name="search" required placeholder="검색어를 입력하세요"/>
+                        </div>
+                        <button type="submit" class="btn-search">검색</button>
+                    </fieldset>
+                </form>
+                <div class="board">
+                    <section class="notice-tab">
+                        <h2 class="notice-tab-heading" id="notice-heading" tabindex="0">공지사항</h2>
+                        <ul class="notice-list">
+                            <li><a href="#" class="icon-dot-circled">html의 모든것을 알려주마 샘플 활용법</a><time datetime="2020-07-20T00:00:00.000Z">2020.07.20</time></li>
+                            <li><a href="#" class="icon-dot-circled">w3c사이트 리뉴얼 및 공지사항</a><time datetime="2020-07-20T00:00:00.000Z">2020.07.20</time></li>
+                            <li><a href="#" class="icon-dot-circled">kwcag2.1 소식</a><time datetime="2020-07-20T00:00:00.000Z">2020.07.20</time></li>
+                            <li><a href="#" class="icon-dot-circled">서버 점검으로 인한 사이트 이용안내입니다.</a><time datetime="2020-07-20T00:00:00.000Z">2020.07.20</time></li>
+                            <li><a href="#" class="icon-dot-circled">여러분들이 생각하는 웹 접근성에 대해 이야기...</a><time datetime="2020-07-20T00:00:00.000Z">2020.07.20</time></li>
+                        </ul>
+                        <a href="#" class="icon-more" title="공지사항">더보기</a>
+                    </section>
+                    <section class=pds-tab">
+                        <h2 class="pds-heading" id="pds-heading" tabindex="0">자료실</h2>
+                        <ul class="notice-list">
+                            <li><a href="#" class="icon-dot-circled">디자인 사이트 링크 모음</a><time datetime="2020-07-20T00:00:00.000Z">2020.07.20</time></li>
+                            <li><a href="#" class="icon-dot-circled">웹 접근성 관련 자료 모음</a><time datetime="2020-07-20T00:00:00.000Z">2020.07.20</time></li>
+                            <li><a href="#" class="icon-dot-circled">예제 샘플 응용해보기</a><time datetime="2020-07-20T00:00:00.000Z">2020.07.20</time></li>
+                            <li><a href="#" class="icon-dot-circled">웹 접근성 향상을위한 국가표준 기술가이드라인</a><time datetime="2020-07-20T00:00:00.000Z">2020.07.20</time></li>
+                            <li><a href="#" class="icon-dot-circled">로얄티 프리 이미지자료</a><time datetime="2020-07-20T00:00:00.000Z">2020.07.20</time></li>
+                        </ul>
+                        <a href="#" class="icon-more" title="공지사항">더보기</a>
+                    </section>
+                </div>    
+            </div>
             <div class="group group3">group3</div>
         </main>
         <article class="slogan">slogan</article>

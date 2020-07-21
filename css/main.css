@@ -229,7 +229,6 @@ a {
     width: 250px;
 }
 .group2 {
-    background-color: plum;
     width: 380px;
 }
 .group3 {
@@ -243,7 +242,7 @@ a {
     border-radius: 5px;
     padding: 10px;
     box-shadow: 5px 5px 0 0 #aaa;
-
+    width: calc(100% - 5px);
 }
 .login-heading{
     color: rgb(255, 255, 0);
@@ -328,49 +327,87 @@ a {
     color: yellowgreen;
     margin-right: .2em;
   }
-.validation-list{
-    list-style: none;
-    background-image: radial-gradient(to bottom skyblue,dodgerblue);
-    padding: 0px;
-   
-}
-.validation-list a{
-    padding: 10px;
 
+  /* 유효성 검사 배너 링크 */
+.validation-list {
+    margin-top: 25px;
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
 }
-.validation-list li{
+
+.validation-list a{
+    display: block;
     margin-top: 10px;
+    border: 1px solid #aaa;
+    border-radius: 20px;
     background-color: #ccc;
-    border-radius: 50px;
-    height: 35px;
-    padding-left: 20px;
-    padding-top: 10px;
-    border: 1px solid gray;
+    background-image: url(./images/validation_icon.png),linear-gradient(180deg,#ccc,#eee);
+    background-repeat: no-repeat, repeat;
+    background-position: 15px 50%, 0 0;
+    padding: 8px 10px 8px 45px;
 }
-.validation-list li:first-child{
-    
+.validation-list a:hover {
+    color: #f00;
 }
-.validation-list li:last-child{
-    
-}
+/* 웹 관련 용어 */
 .term {
-    background-color: #ccc;
-    border: 1px solid grey;
-    border-radius: 10px;
-    padding-left: 10px;
+    border: 1px solid #aaa;
+    background: #ccc linear-gradient(180deg,#ccc,#eee);
+    border-radius: 5px;
+    margin-top:20px;
+    padding: 15px;
 }
 .term-heading {
+    margin: 0;
     font-weight: 700;
-    font-size: 1.5rem;
-    padding-left: 10px;
+    font-size: 1.6rem;
 }
-.term-list-subject {
-    
+.term-list{
+    margin-top: 10px;
+    margin-bottom: 0;
 }
-.term-list-thumbnail {
-    
+.term-list > div {
+    margin-top: 10px;
 }
-
+.term-list > div::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+.term-list-subject{
+    color: #296897;
+}
+.odd .term-list-subject, .odd .term-list-brief {
+    float: right;
+    width: 145px;
+}
+.odd .term-list-thumbnail{
+    float: left;
+    margin-left: 0;
+}
+.term-list-brief {
+    margin-left: 0;
+    margin-top:5px;
+}
+.even .term-list-subject, .even .term-list-brief {
+    float: left;
+    width: 145px;
+}
+.even .term-list-thumbnail{
+    float: right;
+    margin-left: 0;
+}
+/* 검색폼 */
+.search-form{
+    border: 1px solid #aaa;
+    border-bottom: 0;
+    border-radius: 15px 15px 0 0;
+    background: linear-gradient(to bottom, #ccc, #eee);
+    background-color: #ccc;
+    padding: 15px 25px 10px;
+}
+.
 /* 슬로건 */
 .slogan {
     background-color:green
