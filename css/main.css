@@ -132,6 +132,10 @@ a {
     padding-left: 0;
     list-style: none;
     white-space: nowrap;
+    display: none;
+}
+.menu-act .sub-menu {
+    display: block;
 }
 .sub-menu li, .sub-menu a{
     display: inline-block;
@@ -140,6 +144,9 @@ a {
     /* background-color:yellow; */
     padding: 8px 0;
     margin-right: 1em;
+}
+.sub-menu a:hover{
+    color: tomato;
 }
 .sub-menu a::before{
     content: '\f192';
@@ -159,8 +166,8 @@ a {
 .sub-menu4, .sub-menu5, .sub-menu6{
     right: 0;
 }
-.sub-menu1{
-    display:block;
+/* .sub-menu1{
+    display:none;
 }
 .sub-menu2{
     display: none;
@@ -176,7 +183,7 @@ a {
 }
 .sub-menu6{
     display: none;
-}
+} */
 /* 비쥬얼 */
 @keyframes textAni{
     0%{
@@ -468,7 +475,7 @@ a {
    padding: 0 10px;
 }
 /* 공지사항 및 자료실 */
-.board {
+/* .board {
     margin: 0;
     padding: 0;
     position: relative;
@@ -494,6 +501,7 @@ a {
     border: 1px solid #aaa;
     color: gray;
 }
+.tab-act.
 .notice-list {
     list-style: none;
     padding: 0;
@@ -519,10 +527,16 @@ a {
     display: inline-block;
     width: 300px;
     vertical-align: top;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 .pds-list a {
     display: inline-block;
     width: 300px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 .notice-more.icon-plus, .pds-more.icon-plus{
     position: absolute;
@@ -541,7 +555,140 @@ a {
     display: inline-block;
     margin-right: 10px;
     margin-bottom: 10px;
+} */
+/* 공지사항 및 자료실 */
+.board {
+
+    margin-top: 20px;
+    position: relative;
+    padding-top: 45px;
 }
+.notice-heading, .pds-heading {
+
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 400; /*h2를 썼기때문에 쓰는 3가지 코드*/
+    position: absolute;
+    top:0;
+
+}
+.notice-heading{
+    left: 0;
+}
+.pds-heading {
+    left: 74px;
+}
+.tab {
+    color: #666;
+    border: 1px solid #aaa;
+    border-radius: 5px 5px 0 0;
+    padding: 5px 10px;
+    display: block;
+    background: #ccc linear-gradient(150deg, #ccc, #eee);
+}
+.tab-act .tab{
+    color: #db5629;
+    border-color: #db5629 #db5629 #fff #db5629;
+    background: #fff;
+}
+.notice-list, .pds-list, .notice-more, .pds-more {
+    display: none;
+}
+.tab-act .notice-list, .tab-act .pds-list, .tab-act .notice-more, .tab-act .pds-more {
+    display: block;
+}
+.notice-list, .pds-list{
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    min-height: 130px;
+}
+.notice-list li, .pds-list li{
+    margin-bottom: 10px;
+}
+.notice-list li::after, .pds-list li::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.notice-list a::before, .pds-list a::before  {
+    content: '\f192';
+    font-family: 'fontello';
+    display: inline-block;
+    margin-right: .2em;
+}
+.notice-list a, .pds-list a{
+    float: left; /*블록박스처럼 됨*/
+    width: 300px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.notice-list time, .pds-list time{
+    float: right;
+}
+.notice-more, .pds-more {
+    position: absolute;
+    top: -8px;
+    right: -8px;/*왜 굳이?*/
+    padding: 8px;
+}
+.icon-plus::before {
+    color:hsla(110, 70%, 50%, 1);
+}
+
+/* 새소식 */
+.news {
+    margin-top: 20px;
+    position: relative;
+}
+.news::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 80%;
+    height: 1px;
+    background: #aaa linear-gradient(90deg, #aaa, #fff);
+}
+.news-heading {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #db5629;
+}
+.news-item{
+    margin-top: 30px;
+    padding-left: 130px; /*왼쪽여백을 줘서 썸네일만 옮기게*/
+    position: relative;
+}
+.news-item-subject {
+    margin: 0;
+    font-size: 1.4rem;
+}
+.news-item-brief {
+    margin: 10px 0;
+    line-height: 1.5; /*1.5em이랑 150%랑 다른거임. 이 두개는 상속받는크기*/
+}
+.news-item-thumbnail img{
+    margin-bottom: 15px;
+    box-shadow: 0 15px 20px 2px #ccc;
+}
+.news-more {
+    position: absolute;
+    padding: 8px;
+    top: -8px;
+    right: -8px;
+}
+.news-item-thumbnail{
+    margin: 0;
+    position: absolute;
+    top: 3px;
+    left: 0;
+    text-align: center;
+    box-shadow: ;
+}
+
 /* 슬로건 */
 .slogan{
     background-color: orange;
