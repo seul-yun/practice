@@ -572,6 +572,15 @@ a {
     top:0;
 
 }
+.btn-notice {
+    color: #666;
+    border: 1px solid #aaa;
+    border-radius: 5px 5px 0 0;
+    padding: 5px 10px;
+    display: block;
+    background: #ccc linear-gradient(150deg, #ccc, #eee);
+    cursor: pointer;
+}
 .notice-heading{
     left: 0;
 }
