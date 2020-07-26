@@ -656,6 +656,34 @@ a {
     border: 0;
     vertical-align: top;
 }
+/* 관련 사이트 */
+.related {
+    margin-top: 10px;
+}
+.related-list {
+    background-color: #fff;
+    list-style: none;
+    padding-left: 0;
+    margin: 10px 0 0 0;
+    height: 27px;
+    overflow: hidden;
+    border:  1px solid #aaa;
+    border-radius: 5px;
+    transition: all 2000ms;
+}
+.related-list:hover {
+    height: 147px;
+    padding: 10px 0;
+}
+.related-list li{
+    padding: 2px 5px;
+}
+.related-list a {
+    line-height: 21px;
+    display: block;
+    text-indent: 1em;
+    flex-grow: 1;
+}
 /* 슬로건 */
 .slogan{
     background-color: orange;
