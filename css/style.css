@@ -1,0 +1,700 @@
+@import url(./normalize.css);
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+/* @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css); */
+@import url(./fontello.css);
+*,
+* ::before, 
+* ::after {
+    box-sizing: border-box;
+}
+html{
+    font-size: 10px;
+}
+body{
+    font-size: 1.4rem;
+    color: #181818; 
+    background: url(./images/bg_flower.png) no-repeat 50% 0 scroll, #fff linear-gradient(to bottom, #ccc 0%, #fff 70%, #fff 100%);
+    font-family: 'Spoqa Han Sans';
+    font-weight: 400;
+}
+/* 숨김 콘텐츠 */
+.a11y-hidden, legend {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    margin: -1px;
+    clip-path: polygon(0 0, 0 0, 0 0);
+}
+/* 링크 스타일 */
+a {
+    text-decoration: none;
+    color:inherit;
+}
+/* 레이아웃 */
+.container{
+    /* background-color: #ccc;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center; */
+}
+.header, .visual, .main, .slogan, .footer{
+    width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* 헤더 */
+.header{
+    background-color: #fff;
+    border-radius: 0 0 15px 15px;
+    padding: 1px 30px;
+    position: relative;
+}
+/* 로고 */
+.logo{
+    position: absolute;
+    top: 26px;
+    left: 60px;
+}
+/* 멤버링크 */
+.member{
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-right: -8px;
+    font-size: 0;
+    text-align: right;
+}
+.member li, .member a{
+    display: inline-block;
+}
+.member li{
+    font-size: 1.4rem;
+}
+.member a{
+    text-transform: uppercase;
+    padding : 2px 8px 2px 3px;
+}
+.member [aria-hidden]{
+    /* margin: 0 5px; */
+}
+/* 메인 메뉴 */
+.menu {
+    background: #f79f33 linear-gradient(to bottom, #f79f33 0%,#ff6e00 45%,#ed6e00 58%,#f79f33 100%);
+    padding-left: 0;
+    list-style: none;
+    margin: 0 0 35px;
+    padding-left: 225px;
+    border-top: 2px solid #000;
+    border-radius: 0 0 5px 5px;
+    height: 50px;
+}
+.menu::after{
+    content:"";
+    display: block;
+    clear: both;
+}
+.menu-item{
+    float: left;
+    position: relative;
+}
+.menu-act .btn-menu{
+    color: #ff0;
+
+}
+.menu-act .btn-menu::after{
+    content : "";
+    display : block;
+    background-color:blue;
+    height: 2px;
+
+}
+.btn-menu{
+    background-color: transparent;
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 700;
+    border: 0;
+    line-height: 48px;
+    border-left: 2px solid rgba(255,255,255,0.85);
+    padding: 0 20px;
+    cursor: pointer;
+    text-shadow: 1px 0 0 #000, 
+    0 1px 0 #000,
+    -1px 0 0 #000, 
+    0 -1px 0 #000;
+}
+.sub-menu{
+    /* background-color: pink; */
+    position: absolute;
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+    white-space: nowrap;
+    display: none;
+}
+.menu-act .sub-menu {
+    display: block;
+}
+.sub-menu li, .sub-menu a{
+    display: inline-block;
+}
+.sub-menu a{
+    /* background-color:yellow; */
+    padding: 8px 0;
+    margin-right: 1em;
+}
+.sub-menu a:hover{
+    color: tomato;
+}
+.sub-menu a::before{
+    content: '\f192';
+    font-family: 'fontello';
+    display: inline-block;
+    /* text-decoration: inherit;  링크일때 상속 받겠느냐*/
+    width: 1em;
+    margin-right: .2em;
+    margin-left: .2em;
+}
+.sub-menu a:hover::before, .sub-menu a:focus::before{
+    content: '\e800';
+}
+.sub-menu1, .sub-menu2, .sub-menu3{
+    left: 0;
+}
+.sub-menu4, .sub-menu5, .sub-menu6{
+    right: 0;
+}
+/* .sub-menu1{
+    display:none;
+}
+.sub-menu2{
+    display: none;
+}
+.sub-menu3{
+    display: none;
+}
+.sub-menu4{
+    display: none;
+}
+.sub-menu5{
+    display: none;
+}
+.sub-menu6{
+    display: none;
+} */
+/* 비쥬얼 */
+@keyframes textAni{
+    0%{
+        font-size: 12px;
+        color: rgba(0, 0, 0, 0);
+        transform:  translate(0,0);
+    }
+    100%{
+        font-size: 24px;
+        color: rgba(0, 0, 0, 1);
+        transform:  translate(400px,75px);
+    }
+}
+@keyframes bgAni{
+    0%{opacity: 1;}
+    100%{opacity: 0;}
+}
+
+.visual{
+    /* background-color: lime; */
+    height: 120px;
+    position: relative;
+}
+.visual::before, .visual::after{
+    animation: bgAni 2000ms ease-in-out infinite alternate;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+}
+.visual::before{
+    background-image: url(./images/ani_flower_01.png),url(./images/ani_flower_02.png);
+    background-position: 0 -10px , 670px 0;
+} 
+.visual::after{
+    background-image: url(./images/ani_flower_03.png),url(./images/ani_flower_04.png);
+    background-position: 300px 0 , 800px 20px;
+    animation-delay: 1000ms;
+} 
+.visual-text{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2.4rem;
+    width: 500px;
+    animation: textAni 5000ms ease-in-out forwards;
+}
+/* 메인 콘텐츠 */
+.main{
+    background-color: #fff;
+    min-height: 450px;
+    padding: 30px;
+    display: flex;
+    flex-flow: row nowrap ;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-radius: 15px 15px 0 0;
+}
+.group1{
+    /* background-color: pink; */
+    width: 250px;
+}
+.group2{
+    /* background-color: lightgreen; */
+    width: 380px;
+}
+.group3{
+    /* background-color: coral; */
+    width: 190px;
+}
+.clearfix::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+/* 로그인 */
+.login {
+    background: #f79f33 linear-gradient(to bottom, #f79f33,#ff6e00); 
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 5px 5px 0 0 grey;
+    width: calc(100% - 5px); /*총 여백이 변화되어도 같이 변화될 수 있도록 calc적용*/
+}
+.login-heading {
+    margin: 0;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    color: #ff0;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+.login-form{
+    background-color: #fff;
+    padding: 10px 10px 0 10px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+.login-form fieldset {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    position: relative;
+    padding-bottom: 5px; /*위쪽 아래쪽 10px, login-form div의 5px과 더해짐*/
+    border-bottom: 1px solid #aaa;
+}
+.login-form div{
+    margin-bottom: 5px;
+    /* width: 150px; */
+}
+.login-form label{
+    display: inline-block;
+    width: 55px;
+}
+.login-form input{
+    width: 90px;
+    padding-left: 3px;
+    height: 24px;
+    padding: 1px 1px 1px 5px;
+}
+.btn-login {
+    position: absolute;
+    top : 0;
+    right: 0;
+    background-color: peru;
+    border: 1px solid peru;
+    color: #fff;
+    width: 50px;
+    height: 52px;
+    border-radius: 3px;
+    font-size: 1.3rem;
+}
+.member-only {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    background-color: #fff;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.member-olny::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+.member-only a{
+    padding-top: 5px ;
+    padding-bottom: 5px;
+}
+.member-only li:first-child{
+    float: left;
+}
+.member-only li:last-child{
+    float: right;
+}
+.member-only a::before{
+    content: '\e803';
+    font-family: 'fontello';
+    color: #e65400;
+    display: inline-block;
+    margin-right: .2em;
+}
+/* 유효성 검사 배너 링크 */
+.validation-list{
+    margin-top: 25px;
+    /* background-color: yellow; */
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+.validation-list a{
+    display: block;
+    margin-top: 10px;
+    border : 1px solid #aaa;
+    border-radius: 20px;
+    background-color: #ccc;
+    background-image: url(./images/validation_icon.png),linear-gradient(180deg,#ccc,#eee);
+    background-repeat: no-repeat, repeat;
+    background-position: 15px 50%, 0 0;
+    padding: 8px 10px 8px 45px;
+    /*line-height: 30px;/*가급적 높이를 고정하지 않는것이 좋음)*/
+}
+.validation-list a:hover{
+    color: #f00;
+}
+/* 웹 관련 용어 */
+.term {
+    border: 1px solid #aaa;
+    background: #ccc linear-gradient(180deg,#ccc,#eee);
+    border-radius: 5px;
+    margin-top: 20px;
+    padding: 15px;
+
+}
+.term-heading {
+    margin: 0;
+    font-weight: 700;
+    font-size: 1.6rem;
+}
+.term-list {
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+.term-list > div {
+    margin-top: 10px;
+}
+.term-list > div::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+.term-list-subject{
+    color: #296897;
+}
+.odd .term-list-subject, .odd .term-list-brief {
+    float: right;
+    width: 145px;
+}
+.odd .term-list-thumbnail{
+    float: left;
+    margin-left: 0;
+}
+.odd .term-list-brief {
+    margin-left: 0;
+    margin-top:5px;
+    /* line-height: 1.5rem; */
+}
+.even .term-list-subject, .even .term-list-brief {
+    float: left;
+    width: 145px;
+}
+.even .term-list-thumbnail{
+    float: right;
+    margin-left: 0;
+}
+.even .term-list-brief {
+    margin-left: 0;
+    margin-top:5px;
+    /* line-height: 1.5rem; */
+}
+/* 검색 폼 */
+.search-form {
+    background: #ccc linear-gradient(180deg,#ccc,#eee);/*180deg가 기본값*/
+    border-radius: 15px 15px 0 0;
+    padding: 15px 25px 10px;
+    border: 1px solid #aaa;
+    border-bottom-color: #fff;
+}
+.search-form fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    
+}
+.search-form div{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.search-form label,
+.btn-search {
+    white-space: nowrap;
+}
+.search-form label::before{
+    content: '\e802';
+    font-family: 'fontello';
+    display: inline-block;
+    margin-right: .2em;
+    /* margin: 5px; */
+}
+.search-form input [type="search"] {
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    padding: 1px 1px 1px 5px;
+    height: 24px;
+    /* flex-grow: 1; */
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 200px;
+}
+.btn-search{
+   background-color: #222;
+   color: #fff;
+   border: 1px solid #aaa;
+   border-radius: 3px;
+   font-style: 1.3rem;
+   height: 24px;
+   padding: 0 10px;
+}
+
+/* 공지사항 및 자료실 */
+.board {
+
+    margin-top: 20px;
+    position: relative;
+    padding-top: 45px;
+}
+.notice-heading, .pds-heading {
+
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 400; /*h2를 썼기때문에 쓰는 3가지 코드*/
+    position: absolute;
+    top:0;
+
+}
+.notice-heading{
+    left: 0;
+}
+.pds-heading {
+    left: 74px;
+}
+.tab {
+    color: #666;
+    border: 1px solid #aaa;
+    border-radius: 5px 5px 0 0;
+    padding: 5px 10px;
+    display: block;
+    background: #ccc linear-gradient(150deg, #ccc, #eee);
+}
+.tab-act .tab{
+    color: #db5629;
+    border-color: #db5629 #db5629 #fff #db5629;
+    background: #fff;
+}
+.notice-list, .pds-list, .notice-more, .pds-more {
+    display: none;
+}
+.tab-act .notice-list, .tab-act .pds-list, .tab-act .notice-more, .tab-act .pds-more {
+    display: block;
+}
+.notice-list, .pds-list{
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    min-height: 130px;
+}
+.notice-list li, .pds-list li{
+    margin-bottom: 10px;
+}
+.notice-list li::after, .pds-list li::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.notice-list a::before, .pds-list a::before  {
+    content: '\f192';
+    font-family: 'fontello';
+    display: inline-block;
+    margin-right: .2em;
+}
+.notice-list a, .pds-list a{
+    float: left; /*블록박스처럼 됨*/
+    width: 300px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.notice-list time, .pds-list time{
+    float: right;
+}
+.notice-more, .pds-more {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    padding: 8px;
+}
+.icon-plus::before {
+    color:hsla(110, 70%, 50%, 1);
+}
+
+/* 새소식 */
+.news {
+    margin-top: 20px;
+    position: relative;
+}
+.news::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 80%;
+    height: 1px;
+    background: #aaa linear-gradient(90deg, #aaa, #fff);
+}
+.news-heading {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #db5629;
+}
+.news-item{
+    margin-top: 30px;
+    padding-left: 130px; /*왼쪽여백을 줘서 썸네일만 옮기게*/
+    position: relative;
+}
+.news-item-subject {
+    margin: 0;
+    font-size: 1.4rem;
+}
+.news-item-brief {
+    margin: 10px 0;
+    line-height: 1.5; /*1.5em이랑 150%랑 다른거임. 이 두개는 상속받는크기*/
+}
+.news-item-thumbnail img{
+    margin-bottom: 15px;
+    box-shadow: 0 15px 20px 2px #ccc;
+}
+.news-more {
+    position: absolute;
+    padding: 8px;
+    top: -8px;
+    right: -8px;
+}
+.news-item-thumbnail{
+    margin: 0;
+    position: absolute;
+    top: 3px;
+    left: 0;
+    text-align: center;
+    box-shadow: ;
+}
+/* 신규 이벤트 및 관련사이트 */
+.gradient-box {
+    border: 1px solid #aaa;
+    background: #ccc linear-gradient(180deg,#ccc,#eee);
+    border-radius: 5px;
+    padding: 10px;
+}
+.event-heading,.related-heading {
+    margin: 0;
+    font-size: 1.6rem;
+}
+.event-heading span, .related-heading span {
+    color: #db5629;
+}
+/* 신규 이벤트 */
+.event {
+    border-bottom: 1px solid #aaa;
+    position: relative;
+}
+.event-thumbnail, .event-brief {
+    margin: 10px 0;
+}
+.event-thumbnail img {
+    border: 1px solid #aaa;
+    box-shadow: 5px 5px 0 0 #aaa;
+}
+.event-brief em {
+    font-style: normal;
+}
+.btn-wrap {
+    height: 18px;
+    position: absolute;
+    top:0;
+    right: 0;
+}
+.btn-next {
+    background-position: -35px 0;
+}
+.btn-prev, .btn-next {
+    background-color: #ccc;
+    background-image: url(./images/back_forward.png);
+    background-repeat: no-repeat;
+    width: 19px;
+    height: 18px;
+    padding: 0;
+    cursor: pointer;
+    border: 0;
+    vertical-align: top;
+}
+/* 관련 사이트 */
+.related {
+    margin-top: 10px;
+}
+.related-list {
+    background-color: #fff;
+    list-style: none;
+    padding-left: 0;
+    margin: 10px 0 0 0;
+    height: 27px;
+    overflow: hidden;
+    border:  1px solid #aaa;
+    border-radius: 5px;
+    transition: all 2000ms;
+}
+.related-list:hover {
+    height: 147px;
+    padding: 10px 0;
+}
+.related-list li{
+    padding: 2px 5px;
+}
+.related-list a {
+    line-height: 21px;
+    display: block;
+    text-indent: 1em;
+    flex-grow: 1;
+}
+/* 슬로건 */
+.slogan{
+    background-color: orange;
+}
+.footer-bg{
+    background-color: purple;
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap ;
+    align-items: center;
+}
+.footer{
+    background-color: skyblue;
+}
