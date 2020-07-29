@@ -1,0 +1,39 @@
+@import url(./normalize.css);
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+@import url(./fontello.css);
+
+*,*::before,*::after {
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+/* 공통 사항 */
+.a11y-hidden {
+    margin: -1px;
+    height: 1px;
+    width: 1px;
+    position: absolute;
+    overflow: hidden;
+    clip-path: polygon(0 0, 0 0, 0 0);
+}
+/* 레이아웃 */
+.container {
+    min-width: 1120px;
+    background-color: #fff;
+}
+.logo {
+    color: rgb(36, 170, 36);
+}
+.logo a{
+    font-weight: 700;
+}
+.navigation {
+    display: flex;
+}
