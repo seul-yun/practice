@@ -10,7 +10,11 @@
 html{
     font-size: 20px;
 }
+body {
+    background-image: url(./image/store_bg.jpg);
+}
 /* 공통 */
+
 ul {
     list-style: none;
     margin: 0;
@@ -30,4 +34,20 @@ a {
     overflow: hidden;
     margin: -1px;
 }
+/* 통합검색 */
+.search__form fieldset {
+    border: 0;
+}
+.search__form input [type="search"]{
+    
+}
 
+.search__form button{
+    background-color: #fff;
+    color: #fff;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    font-style: 1.3rem;
+    height: 2rem;
+    width: 2rem;
+}
