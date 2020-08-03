@@ -4,11 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Starbucks Coffee Korea</title>
-    <link rel="stylesheet" href="./main.css" />
+    <link rel="stylesheet" href="./css/small.css" media="screen and (min-width: 320px) and (max-width: 999px)" />
+    <link rel="stylesheet" href="./css/large.css" media="screen and (min-width: 1000px)" />
+    <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <div class="container">
-        <header class="header">
+        <!-- <header class="header">
             <h1 class="logo">
                 <a href="#">
                     <img src="./image/logo.png" alt="스타벅스 로고" />
@@ -172,22 +174,48 @@
                     </li>
                 </ul>
             </nav>
-        </header>
+        </header> -->
         <main class="main">
-            <div class="visual">
-                <img src="./image/summer3_mv_bg.jpg" alt="신상 이미지 배경" class="new" />
-            </div>
+            <section class="badge">
+                <a href="#"><img src="./image/20200714_badge_pc.png" alt="스타벅스 홈카페" /></a>
+                <input type="button" value="닫기" onClick="pop.close()">
+            </section>
+            <section class="promotion">
+                <h2 class="promotion a11y-hidden">여름 신상 프로모션</h2>
+                <div class="promotion__summer">
+                    <h3 class="promotion__header">
+                        <img src="./image/20_summer3_emblem.png" alt="프로모션 제목" />
+                    </h3>
+                    <figure class="new1">
+                        <a href="#">
+                            <img src="./image/summer3_bev1.png" alt="블론드 서머라떼" />
+                            <img src="./image/summer3_bev1_txt.png" alt="블론드 서머라떼" />
+                        </a>
+                    </figure>
+                    <figure class="new2">
+                        <a href="#">
+                            <img src="./image/summer3_bev2.png" alt="블론드 서머라떼" />
+                        </a>
+                        <img src="./image/summer3_bev2_txt.png" alt="블론드 서머라떼" />
+                        </figure>
+                    <figure class="new3">
+                        <a href="#">
+                            <img src="./image/summer3_bev3.png" alt="블론드 서머라떼" />
+                        </a>
+                        <img src="./image/summer3_bev3_txt.png" alt="블론드 서머라떼" />
+                    </figure>
+                    <a href="#" class="probotion_btn">자세히 보기</a>
+                </div>
+            </section>
             <section class="notice">
-                <h2 class="a11y-hidden">공지사항</h2>
+                <h2 class="notice">공지사항</h2>
                 <ul class="notice__list">
                     <li><a href="#">시스템 개선 및 점검안내</a></li>
                     <li><a href="#">SSG PAY 시스템 점검 안내</a></li>
                     <li><a href="#">일시적인 시스템 장애 안내</a></li>
                     <li><a href="#">더 양평DT점 주문 시 유의 사항</a></li>
                 </ul>
-            </section>
-            <section class="promotion">
-                <h2 class="a11y-hidden">프로모션</h2>
+                <h2 class="promo">프로모션</h2>
                 <ul class="notice__list">
                     <li><a href="#"><img src="./image/nu5js2_20200713164018239.jpg" alt="신제품 소개" /></a></li>
                     <li><a href="#"><img src="./image/uV703j_20200603100100394.jpg" alt="자메이카 블루마운틴" /></a></li>
@@ -203,17 +231,16 @@
                             <p><span>스타벅스 회원이세요?</span> 로그인을 통해 나만의 리워드를 확인해 보세요.
                             <span>스타벅스 회원이 아니세요?</span> 가입을 통해 리워드 혜택을 즐기세요</p>
                         </dl>
-                        <button class="btn-join" type="button">회원가입</button>
-                        <button class="btn-login" type="button">로그인</button>
+                        <a href="https://www.starbucks.co.kr/mem/join1.do">회원가입</a>
+                        <a href="https://www.starbucks.co.kr/login/login.do?redirect_url=https%3A%2F%2Fwww.starbucks.co.kr%2Findex.do">로그인</a>
                     </div>
                     <div class="rewards__join">
                         <p>회원가입 후, 스타벅스 e-Gift Card를 <span>"나에게 선물하기"로 구매하시고, 편리하게 등록하세요!</span> 카드를 등록하여 마이 스타벅스 리워드
                             회원이 되신 후, 첫 구매를 하시면 무료 음료쿠폰을 드립니다!</p>
-                        <button class="btn-join" type="button">e-Gift Card</button>
+                        <a href="https://www.starbucks.co.kr/msr/sceGift/gift_step1.do">e-Gift Card 선물하기</a>
                     </div>
                 </div>
-            </section>
-            
+            </section>          
         </main>
 
     </div>

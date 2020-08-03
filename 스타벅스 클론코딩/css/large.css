@@ -11,7 +11,7 @@ html{
     font-size: 20px;
 }
 body {
-    background-image: url(./image/store_bg.jpg);
+    background-image: url(/image/store_bg.jpg);
 }
 /* 공통 */
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -78,7 +78,7 @@ a {
 }
 
 .promotion {
-    background-image: url(./image/summer3_mv_bg.jpg);
+    background-image: url(/image/summer3_mv_bg.jpg);
     padding: 20px;
     position: relative;
 }
