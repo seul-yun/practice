@@ -61,7 +61,15 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-
+.star__btn {
+  display: inline-block;
+  border: 2px solid #fff;
+  color: #fff;
+  font-weight: 700;
+  padding: 10px 30px;
+  border-radius: 3px;
+  margin: 5px;
+}
 /* 링크 스타일 */
 a {
     text-decoration: none;
@@ -77,21 +85,27 @@ a {
     margin: -1px;
 }
 
+/* 메인 프로모션 */
 .promotion {
     background-image: url(/image/summer3_mv_bg.jpg);
     padding: 20px;
     position: relative;
 }
-
 .probotion_btn{
-    border: 2px solid #fff;
-    color: #fff;
-    font-weight: 700;
-    padding: 10px 30px;
-    border-radius: 3px;
+
 }
 .badge {
   position: fixed;
   top: 2rem;
   right: 2rem;
   z-index: 1;
+}
+/* 리워드 */
+.rewards__join {
+  background-image: url(/image/reward_texbg.jpg);
+}
+.my__rewards{
+  background-image: url(/image/reward_star_bg_w.png);
+  background-repeat: no-repeat;
+}
+
