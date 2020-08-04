@@ -56,8 +56,22 @@ body {
     display: block;
     clear: both;
 }
+/* 바로가기 */
+.direct{
+    position: fixed;
+    width: 100%;
+    background-color: #000;
+    border-bottom: 1px solid blue;
+    text-align: center;
+    color: #fff;
+    padding: 5px;
+    z-index: 20;
+    top:-30px;
+}
+.direct:focus {
+    top: 0;
+}
 /* 헤더 */
-
 .header{
     position: fixed;
     width: 100%;
@@ -70,9 +84,7 @@ body {
 /* 로고 */
 .logo{
     float: left;
-    /* position: absolute;
-    top: 26px;
-    left: 60px; */
+    margin-top: 20px;
 }
 /* 멤버링크 */
 
@@ -94,11 +106,9 @@ body {
     padding: 0 10px;
     border: none;
     border-radius: 3px;
-    border: 1px solid #ccc;
     height: 34px;
     vertical-align: top;
-    margin: 0;
-
+    margin-left: 10px;
 }
 .member__item button {
     background: #fff url(/image/icon_magnifier_black.png);
@@ -106,36 +116,13 @@ body {
     background-repeat: no-repeat;
     width: 34px;
     height: 34px;
-    border-radius: 5px;
+    border-radius: 3px;
     margin: 0;
-}
-
-/* .search-form {
-    width: 34px;
-    height: 34px;
-    overflow: hidden;
-    display: flex;
-    background-color: #fff;
-    list-style: none;
-    padding-left: 0;
-    margin: 10px 0 0 0;
-    height: 34px;
-    overflow: hidden;
-    border-radius: 5px;
-    transition: all 200ms;
-    vertical-align: center;
-}
-.search-form:active {
-    padding-left: 100px;
-    width: 100px;
-}
-
-.search-form input{
     border: none;
-} */
+}
+
 
 /* 메인메뉴 */
-
 .main__menu {
     color: #333;
     display: flex;
@@ -149,18 +136,19 @@ body {
     position: absolute;
     width: 100%;
     left: 0;
-    height: 200px;
+    height: auto;
     display: none;
+    padding: 30px 0;
 }
-.main__menu > li > a:hover {
+.main__menu > li:hover {
     background-color:#2c2a29;
-    /* color: cadetblue; */
+    color: cadetblue;
 }
 .main__menu > li:hover .menu__sub{
     display: flex;
     width: 110rem;
     margin: 0 auto;
-    color: #fff;
+    color: #fff;   
 }
 .main__menu > li:hover .list__bg{
     display: block;
@@ -169,24 +157,44 @@ body {
 .main__menu {
     margin: 30px 10px;
 }
-.main__menu >li > a{
+.main__menu >li{
     padding: 20px;
+    margin: 0 10px;
+}
+.menu__sub li > a{
+    display: inline-block;
+    font-size: 1.7rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.menu__sub {
+    justify-content: space-between;
 }
 
+.menu__sub li{
+    padding-bottom: 10px;
+}
+.menu__sub__list {
+    color: #666;
+}
 
-/* 바로가기 */
-.direct{
+/* 뱃지 */
+.article {
+    padding: 20px;
+    position: relative;
+}
+
+.article {
     position: fixed;
-    width: 100%;
-    background-color: #000;
-    border-bottom: 1px solid blue;
-    text-align: center;
-    color: #fff;
-    padding: 5px;
-    z-index: 20;
-    top:-30px;
-    transition: all 0.5s;
+    top: 20rem;
+    right: 2rem;
+    z-index: 1;
 }
-.direct:focus {
-    top: 0;
+/* 메인 */
+main {
+    background-color: yellowgreen;
+}
+/* 푸터 */
+footer {
+    background-color: skyblue;
 }
